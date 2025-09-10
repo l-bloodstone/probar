@@ -1,0 +1,26 @@
+{
+  "name": "probar",
+  "version": "0.0.0",
+  "description": "node.js package for rendering a progress bar",
+  "keywords": [
+    "progress",
+    "bar",
+    "node.js",
+    "library"
+  ],
+  "homepage": "https://github.com/l-bloodstone/probar#readme",
+  "bugs": {
+    "url": "https://github.com/l-bloodstone/probar/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l-bloodstone/probar.git"
+  },
+  "license": "ISC",
+  "author": "l-bloodstone",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  }
+}
