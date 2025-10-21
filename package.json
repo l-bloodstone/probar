@@ -22,5 +22,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test"
+  },
+  "dependencies": {
+    "@types/node": "^24.7.0"
   }
 }
