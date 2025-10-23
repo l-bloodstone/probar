@@ -1,6 +1,6 @@
 {
   "name": "probar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "node.js package for rendering a progress bar",
   "keywords": [
     "progress",
