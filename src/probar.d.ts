@@ -1,12 +1,13 @@
 import { type BarOptions } from "./bar.ts";
 type ProBarOptions = {
-    barOptions: BarOptions;
+    barOpts: BarOptions;
 };
 declare class ProBar {
     private total;
     private options?;
     private bar;
     private procsed;
+    private currentProgress;
     constructor(total: number, options?: ProBarOptions | undefined);
     add(n?: number): void;
     render(): void;
