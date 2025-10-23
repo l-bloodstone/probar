@@ -1,3 +1,3 @@
-import ProBar from "./src/probar.ts"
+import ProBar from "./src/probar"
 
 export default ProBar
