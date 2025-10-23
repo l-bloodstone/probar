@@ -1,4 +1,4 @@
-import {Bar, BarOptions} from "./bar.ts"
+import {Bar, type BarOptions} from "./bar.ts"
 import process from "node:process"
 
 type ProBarOptions = {
