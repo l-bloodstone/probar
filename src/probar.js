@@ -23,11 +23,12 @@ class ProBar {
     render() {
         if (!this.init && this.options?.title) {
             process.stdout.write(`╭───${this.options?.title}\n`);
+            this.init = true;
         }
         else if (!this.init && !this.options?.title) {
             process.stdout.write("╭───Processing ...\n");
+            this.init = true;
         }
-        this.init = true;
         const percent = ~~((this.procsed / this.total) * 100);
         // do not render to stdout if the current progress doesn't change
         if (this.currentProgress === percent) {
