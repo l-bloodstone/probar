@@ -11,6 +11,7 @@ declare class ProBar {
     private procsed;
     private init;
     private currentProgress;
+    private isDone;
     constructor(total: number, options?: UserProBarOptions | undefined);
     add(n?: number): void;
     render(): void;

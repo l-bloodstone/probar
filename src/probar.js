@@ -7,6 +7,7 @@ class ProBar {
     procsed = 0;
     init = false;
     currentProgress = null;
+    isDone = false;
     constructor(total, options) {
         this.total = total;
         this.options = options;
@@ -17,8 +18,6 @@ class ProBar {
     }
     add(n = 1) {
         this.procsed += n;
-        if (this.procsed > this.total)
-            return;
         this.render();
     }
     render() {
@@ -35,7 +34,7 @@ class ProBar {
             return;
         }
         this.currentProgress = percent;
-        if (percent === 100) {
+        if (percent >= 100) {
             this.done();
             return;
         }
@@ -43,7 +42,10 @@ class ProBar {
         process.stdout.write(this.bar.format(percent));
     }
     done() {
+        if (this.isDone)
+            return;
         this.procsed = this.total;
+        this.isDone = true;
         process.stdout.write("\r");
         process.stdout.write(this.bar.format(100));
         process.stdout.write("  ✔\n");
