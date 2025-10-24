@@ -51,7 +51,6 @@ class ProBar {
     }
 
     done() {
-        if (this.currentProgress === 100) return
         process.stdout.write("\r")
         process.stdout.write(this.bar.format(100))
         process.stdout.write("  ✔")
