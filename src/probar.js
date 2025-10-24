@@ -43,9 +43,10 @@ class ProBar {
         process.stdout.write(this.bar.format(percent));
     }
     done() {
+        this.procsed = this.total;
         process.stdout.write("\r");
         process.stdout.write(this.bar.format(100));
-        process.stdout.write("  ✔");
+        process.stdout.write("  ✔\n");
     }
 }
 export default ProBar;

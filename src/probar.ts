@@ -51,9 +51,10 @@ class ProBar {
     }
 
     done() {
+        this.procsed = this.total
         process.stdout.write("\r")
         process.stdout.write(this.bar.format(100))
-        process.stdout.write("  ✔")
+        process.stdout.write("  ✔\n")
     }
 }
 
