@@ -66,6 +66,6 @@ export class Bar {
             percent = 100
         }
         const numberOfBlocks = ~~((this.options.barWidth / 100) * percent)
-        return `Done: ${this.generateBar(numberOfBlocks)} ${percent}%`
+        return `╰─ Done: ${this.generateBar(numberOfBlocks)} ${percent}%`
     }
 }
