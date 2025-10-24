@@ -43,8 +43,6 @@ class ProBar {
         process.stdout.write(this.bar.format(percent));
     }
     done() {
-        if (this.currentProgress === 100)
-            return;
         process.stdout.write("\r");
         process.stdout.write(this.bar.format(100));
         process.stdout.write("  ✔");
