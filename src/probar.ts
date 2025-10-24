@@ -21,8 +21,8 @@ class ProBar {
     }
     
     add(n: number = 1) {
-        if (this.procsed > this.total) return
         this.procsed += n
+        if (this.procsed > this.total) return
         this.render()
     }
 

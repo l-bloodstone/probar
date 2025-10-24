@@ -16,9 +16,9 @@ class ProBar {
         this.bar = new Bar();
     }
     add(n = 1) {
+        this.procsed += n;
         if (this.procsed > this.total)
             return;
-        this.procsed += n;
         this.render();
     }
     render() {
