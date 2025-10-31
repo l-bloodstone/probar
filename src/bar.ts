@@ -7,8 +7,6 @@ export type BarOptions = {
     barWidth: number
 }
 
-type UserOptions = Partial<BarOptions>
-
 type RGB = {
     r: number,
     g: number,
@@ -17,7 +15,7 @@ type RGB = {
 
 export class Bar {
     private options : BarOptions
-    constructor(public opts ?: UserOptions) { 
+    constructor(public opts ?: Partial<BarOptions>) { 
         this.options = {
             ...this.DefaultBarOption(),
             ...this.opts,

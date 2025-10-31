@@ -6,15 +6,13 @@ type ProBarOptions = {
     barOpts: BarOptions
 }
 
-type UserProBarOptions = Partial<ProBarOptions>
-
 class ProBar {
     private bar: Bar
     private procsed: number = 0
     private init: boolean = false
     private currentProgress: number | null = null
     private isDone: boolean = false
-    constructor(private total: number, private options?: UserProBarOptions) { 
+    constructor(private total: number, private options?: Partial<ProBarOptions>) { 
         if (options != null && options.barOpts != null) {
             this.bar = new Bar(options.barOpts)
         }
