@@ -5,16 +5,15 @@ export type BarOptions = {
     fillColor: RGB | string;
     barWidth: number;
 };
-type UserOptions = Partial<BarOptions>;
 type RGB = {
     r: number;
     g: number;
     b: number;
 };
 export declare class Bar {
-    opts?: UserOptions | undefined;
+    opts?: Partial<BarOptions> | undefined;
     private options;
-    constructor(opts?: UserOptions | undefined);
+    constructor(opts?: Partial<BarOptions> | undefined);
     private DefaultBarOption;
     private generateBar;
     format(percent: number): string;

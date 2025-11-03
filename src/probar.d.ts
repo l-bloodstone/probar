@@ -3,7 +3,6 @@ type ProBarOptions = {
     title: string;
     barOpts: BarOptions;
 };
-type UserProBarOptions = Partial<ProBarOptions>;
 declare class ProBar {
     private total;
     private options?;
@@ -12,7 +11,7 @@ declare class ProBar {
     private init;
     private currentProgress;
     private isDone;
-    constructor(total: number, options?: UserProBarOptions | undefined);
+    constructor(total: number, options?: Partial<ProBarOptions> | undefined);
     add(n?: number): void;
     render(): void;
     done(): void;
